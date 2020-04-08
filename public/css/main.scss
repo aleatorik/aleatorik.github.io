@@ -1,19 +1,29 @@
 ---
 ---
 
-@import 'config';
+@import "config";
 
-@import 'bourbon/bourbon';
+@import "bourbon/bourbon";
 
-@import 'base/poole';
-@import 'base/layout';
-@import 'base/global';
-@import 'base/syntax';
+@import "base/poole";
+@import "base/layout";
+@import "base/global";
+@import "base/syntax";
 
-@import 'component/sidebar';
-@import 'component/hero';
-@import 'component/post';
-@import 'component/page';
-@import 'component/tag';
-@import 'component/masthead';
-@import 'component/pagination';
+@import "component/sidebar";
+@import "component/hero";
+@import "component/post";
+@import "component/page";
+@import "component/tag";
+@import "component/masthead";
+@import "component/pagination";
+
+.search {
+  position: absolute;
+  right: 2.8rem;
+  top: 1rem;
+  left: auto;
+  display: block;
+  padding: 0 0.75rem;
+  font-size: 20px;
+}

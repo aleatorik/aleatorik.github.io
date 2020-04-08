@@ -1,6 +1,6 @@
 # Site Info
 title: Dev Song's Tech Blog
-tagline: "Daseul Song Blog"
+tagline: "테크가이 Dan 개발로그"
 description: 'A Jekyll theme adapted from <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon</a>. Made by <a href="http://codinfox.github.io" target="_blank">@codinfox</a>.'
 baseurl: ""
 url: https://aleatorik.github.io
@@ -25,8 +25,8 @@ version: 1.0.0
 # About/contact
 author:
   name: Daseul Song
-  description: <strong>개발자</strong>로 다시 만나요.
-  gravatar: 3c2986ad7ac1f2230ea3596f44563328 # md5 hash of your email address
+  description: <strong>그저 원한다는 감정을 느끼는 것만으로는 부족해, 그 보다는 반드시 그래야만 한다는 의무감을 느껴야해.</strong>
+  gravatar: # md5 hash of your email address
   contact:
     #    linkedin: https://www.linkedin.com/in/lizhihao
     github: https://github.com/aleatorik
@@ -59,5 +59,5 @@ hero:
 # Puglins
 mathjax: true # whether support mathjax
 google_analytics_token: "UA-163098087-1" # leave blank if you don't want google analytics
-disqus_short_name: "your_short_name" # leave blank if you don't want disqus
+disqus_short_name: "aleatorik" # leave blank if you don't want disqus
 
