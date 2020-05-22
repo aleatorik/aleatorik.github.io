@@ -1,0 +1,36 @@
+---
+layout: post
+title: Few things to consider before joining bootcamp
+category: TIL(today I learned)
+tags: [TIL (Today I Learned)]
+---
+
+# Expect
+
+> - Start Working by November 2020
+> - Addition on Licenses & Certifications of your resume by completion 3 months program
+> - Addition on Job Experience of your resume by Internship
+> - Proper workspace with co-workers giving indirect experience as Developer for the near future
+> - Collaboration in Agile way: Two times of team projects with required Skills
+> - (Such as ES6, React, Redux, SPA, Sass, Node.js, Express.js and unit test(Enzyme), maybe React Native as well)
+> - Code Review from experienced programmers
+
+# Not expect
+
+> - Efficiency of Learning is highly increased because of modern facility
+> - Write a line of code by others
+
+# Still to do (during the months)
+
+> - Coding all by yourself
+> - Study Algorithm & Data Structure and practice of solving problems for interview
+
+# Still not to do (during the months)
+
+> - Distrust what I learn(Tech, Mento, System) from Bootcamp
+> - Other things such as outdoor sports, studying German, Using SNS, Consuming unnecessary contents
+
+## _This approach is considered with an opportunity cost_
+
+What if Self-preparation for job market is failed and take another three months afterwards? <br>- Age matters a lot in this country.<br>
+Furthermore, if the possibility of entering good company with the bootcamp is higher than starting work few months earlier all by myself, the cost will be offset by the time I get done with my job for three months. So it's basically the exchange money for time.
