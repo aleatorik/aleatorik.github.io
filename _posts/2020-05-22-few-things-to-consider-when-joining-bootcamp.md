@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Few things to consider before joining bootcamp
-category: TIL(today I learned)
+category: TIL (Today I Learned)
 tags: [TIL (Today I Learned)]
 ---
 

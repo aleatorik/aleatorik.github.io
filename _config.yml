@@ -1,6 +1,6 @@
 # Site Info
 title: Dev Song's Tech Blog
-tagline: "테크가이 Dan 개발로그"
+tagline: "테크가이 Dan 개발학습로그"
 description: ""
 baseurl: ""
 url: https://aleatorik.github.io
@@ -25,7 +25,7 @@ version: 1.0.0
 # About/contact
 author:
   name: Daseul Song
-  description: <strong>그저 원한다는 감정을 느끼는 것만으로는 부족해, 그 보다는 반드시 그래야만 한다는 의무감을 느껴야해.</strong>
+  description: <strong>그저 원한다는 감정을 느끼는 것만으로는 부족해, 그 보다는 반드시 그래야만 한다는 의무감을 느껴야해</strong>
   gravatar: # md5 hash of your email address
   contact:
     #    linkedin: https://www.linkedin.com/in/lizhihao

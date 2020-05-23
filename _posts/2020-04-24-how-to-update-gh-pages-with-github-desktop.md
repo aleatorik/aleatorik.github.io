@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 코드 변경 시, Github-page에 업데이트 하는 순서(feat. Github desktop)
-category: TIL(today I learned)
+category: TIL (Today I Learned)
 tags: [TIL (Today I Learned)]
 ---
 

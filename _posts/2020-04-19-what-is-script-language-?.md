@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 스크립트(Script) 언어 뜻
-category: TIL(today I learned)
+category: TIL (Today I Learned)
 tags: [TIL (Today I Learned)]
 ---
 
@@ -34,12 +34,16 @@ window.open('221457352867')
 ## 스크립트 언어의 장단점 :
 
 **장점**
+
 >
+
 1. 단순하고 쉬운 문법
 2. 실시간으로 실행
 
 **단점**
+
 >
+
 1. 실행 속도가 느리므로 속도가 중요할 때는 사용을 지양한다.(백준 알고리즘에서 같은 문제를 C와 Python을 이용해 풀어볼 것. Python이 10초 이상 걸리는 문제를, C는 1초도 안되어 해결한다)
 2. 아주 정밀한 산술 연산을 해야할 때
 

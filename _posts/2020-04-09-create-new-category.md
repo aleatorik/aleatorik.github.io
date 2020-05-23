@@ -1,7 +1,7 @@
 ---
 layout: post
 title: jekyll 블로그 새로운 카테고리 및 태그 생성하기
-category: TIL(today I learned)
+category: TIL (Today I Learned)
 tags: [TIL (Today I Learned)]
 ---
 

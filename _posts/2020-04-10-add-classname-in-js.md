@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 자바스크립트 class 이름 추가
-category: TIL(today I learned)
+category: TIL (Today I Learned)
 tags: [TIL (Today I Learned)]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 데이터 객체와 Wrapper 클래스
-category: TIL(today I learned)
+category: TIL (Today I Learned)
 tags: [TIL (Today I Learned)]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: github pull origin 관련 에러해결
-category: TIL(today I learned)
+category: TIL (Today I Learned)
 tags: [TIL (Today I Learned)]
 ---
 
