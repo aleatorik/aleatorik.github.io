@@ -1,4 +1,4 @@
-I"�<h2 id="스크립트-언어의-정의-">스크립트 언어의 정의 :</h2>
+I"�<h2 id="스크립트-언어의-정의-">스크립트 언어의 정의 :</h2>
 
 <p>스크립트 언어는 연극 용어에서 따온 말이다.
 연극에서의 ‘스크립트’는 배우의 대사를 중점으로 배우의 표정, 등장과 퇴장, 무대장치을 중심으로 지시해놓은 내용을 말한다.</p>
@@ -27,22 +27,26 @@
 <h2 id="스크립트-언어의-장단점-">스크립트 언어의 장단점 :</h2>
 
 <p><strong>장점</strong></p>
+
 <blockquote>
 
-  <ol>
-    <li>단순하고 쉬운 문법</li>
-    <li>실시간으로 실행</li>
-  </ol>
 </blockquote>
+
+<ol>
+  <li>단순하고 쉬운 문법</li>
+  <li>실시간으로 실행</li>
+</ol>
 
 <p><strong>단점</strong></p>
+
 <blockquote>
 
-  <ol>
-    <li>실행 속도가 느리므로 속도가 중요할 때는 사용을 지양한다.(백준 알고리즘에서 같은 문제를 C와 Python을 이용해 풀어볼 것. Python이 10초 이상 걸리는 문제를, C는 1초도 안되어 해결한다)</li>
-    <li>아주 정밀한 산술 연산을 해야할 때</li>
-  </ol>
 </blockquote>
+
+<ol>
+  <li>실행 속도가 느리므로 속도가 중요할 때는 사용을 지양한다.(백준 알고리즘에서 같은 문제를 C와 Python을 이용해 풀어볼 것. Python이 10초 이상 걸리는 문제를, C는 1초도 안되어 해결한다)</li>
+  <li>아주 정밀한 산술 연산을 해야할 때</li>
+</ol>
 
 <p><br />
 <em>자료출처: <a href="https://m.blog.naver.com/PostView.nhn?blogId=guseod24&amp;logNo=221463125647&amp;categoryNo=41proxyReferer=https%3A%2F%2Fwww.google.com%2F_">클릭이동</a></em></p>
