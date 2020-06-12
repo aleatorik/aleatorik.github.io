@@ -1,0 +1,85 @@
+I";<ul>
+  <li>
+    <h2 id="클라이언트-pc부터-웹-서버까지">클라이언트 PC부터 웹 서버까지</h2>
+
+    <blockquote>
+      <ol>
+        <li>웹 브라우저가 요청을 발행한다</li>
+      </ol>
+    </blockquote>
+
+    <blockquote>
+      <ol>
+        <li>이름 해석을 한다</li>
+      </ol>
+    </blockquote>
+
+    <blockquote>
+      <ol>
+        <li>Nodemon</li>
+      </ol>
+    </blockquote>
+  </li>
+  <li>
+    <h2 id="npm">Npm</h2>
+  </li>
+  <li>
+    <h2 id="middleware">Middleware</h2>
+
+    <blockquote>
+      <p>Morgan : <em>logger middleware returning a string that will be the log line or undefined / null to skip logging</em></p>
+    </blockquote>
+
+    <blockquote>
+      <p>Helmet : <em>secure Express apps</em></p>
+    </blockquote>
+
+    <blockquote>
+      <p>Cookie parser : <em>keep information in cookies for user authentication</em></p>
+    </blockquote>
+
+    <blockquote>
+      <p>Body parser : <em>check content that users send a website as forms, e.g. JSON, HTML</em></p>
+    </blockquote>
+  </li>
+  <li>
+    <h2 id="router">Router</h2>
+  </li>
+  <li>
+    <h2 id="mvc-pattern">MVC Pattern</h2>
+  </li>
+  <li>
+    <h2 id="pug">Pug</h2>
+    <p>: view engine from express handling View from MVC of Express, which shows HTML with CSS by <strong>res.render</strong> instead of <strong>res.send</strong></p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Layouts, Partials : <em>divide components of websites, how to apply JavaScript code in pug —&gt; <code class="highlighter-rouge">#{}</code> put JS code in the bracket</em></p>
+</blockquote>
+
+<blockquote>
+  <p>Mixins : <em>allow you to create reusable blocks of Pug. 각각 다른 정보를 가지지만 같은 구조를 가지는 데이터를 표시하기 위한 코드를 캡슐화 —&gt; 단순 복사-붙여넣기 대신 웹사이트에서 반복되는 코드를 재활용하기 위해 Block 단위로 코드 작성하여 필요한 곳에서 <code class="highlighter-rouge">include mixins/'name of mixins file'</code>통해 사용.</em></p>
+</blockquote>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">mixin</span> <span class="nx">videoBlock</span><span class="p">(</span><span class="nx">video</span> <span class="o">=</span> <span class="p">{})</span>
+	<span class="nx">h1</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">title</span>
+	<span class="nx">p</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">description</span>
+
+<span class="c1">// Here's how you can apply the codes above</span>
+
+<span class="nx">include</span> <span class="nx">mixins</span><span class="o">/</span><span class="nx">videoBlock</span>
+<span class="nx">block</span> <span class="nx">content</span>
+	<span class="p">.</span><span class="nx">videos</span>
+		<span class="nx">each</span> <span class="nx">item</span> <span class="k">in</span> <span class="nx">videos</span>
+			<span class="o">+</span><span class="nx">videoBlock</span><span class="p">({</span>
+				<span class="na">title</span><span class="p">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">title</span>
+				<span class="na">description</span><span class="p">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">dscription</span>
+			<span class="p">})</span>
+</code></pre></div></div>
+
+<p><br />
+   <em>참고자료: <a href="https://opentutorials.org/module/4636">클릭이동</a></em>
+   <br />
+   <em>참고도서: Hello Coding 그림으로 개념을 이해하는 알고리즘</em></p>
+:ET

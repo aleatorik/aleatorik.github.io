@@ -1,0 +1,61 @@
+I"7<ul>
+  <li>
+    <h2 id="클라이언트-pc부터-웹-서버까지">클라이언트 PC부터 웹 서버까지</h2>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 웹 브라우저가 요청을 발행한다
+2. 이름 해석을 한다
+3. 웹 서버가 요청을 접수한다
+4. 웹 서버가 정적 콘텐츠인지 동적 콘텐츠인지 판단한다
+5. 필요한 경로로 데이터에 엑세스 한다.
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><br /></p>
+<h6 id="용어정리">[용어정리]</h6>
+
+<blockquote>
+  <p><strong>정적 콘텐츠</strong> : 실시간으로 변경할 필요가 없는 데이터. 가령 회사 로고 이미지. 웹 서버에서는 데이터 갱신 빈도가 낮은 것은 디스크에 저장해서 요청이 있으면 저장해둔 내용을 HTTP를 통해 사용자 웹 브라우저로 반환
+<br /></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>동적 콘텐츠</strong> : 높은 빈도로 변경되는 데이터. 예를 들어 사용자의 은행 잔고 정보, 최신 날씨 정보 데이터, 쇼핑 사이트의 장바구니. 입금을 했는데 잔고가 바뀌지 않는다면 곤란하다. 이런 데이터를 서버 내부의 디스크에 저장하면 갱신 빈도가 높기 때문에 디스크 성능이 병목 현상의 원인이 될 수 있다. 일반적으로 동적 콘텐츠는 ‘AP 서버’가 HTML 파일을 동적으로 생성하고 웹 서버는 동적 콘텐츠에 대한 요청을 AP 서버에게 던지고 결과를 기다림</p>
+</blockquote>
+
+<p><br />
+주소창에 ‘https://aleatorik.github.io/’를 입력하고 엔터 키를 누른다. 이때 이름해석(name resolution)이 이루어진 후에 웹 브라우저로 접속하게 된다.
+이는 ‘HTTP’를 이용해서 aleatorik.github.io 서버에 접속한다는 의미다. 하지만 웹 브라우저가 상기 서버의 IP주소를 모른다면, 외부의 DNS서버에 요청을 던지고
+해당 서버의 IP주소 검색 결과를 반환 받는다.</p>
+
+<p><strong><em>인터넷 상의 주소는 ‘IP’라는 숫자로 표현돼 있어서 문자열인 URL과 IP를 연결시키지 않으면 통신이 되지 않는다.</em></strong>
+<br /></p>
+
+<ul>
+  <li>
+    <h2 id="클라이언트-pc부터-웹-서버까지-1">클라이언트 PC부터 웹 서버까지</h2>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 웹 브라우저가 요청을 발행한다
+2. 이름 해석을 한다
+3. 웹 서버가 요청을 접수한다
+4. 웹 서버가 정적 콘텐츠인지 동적 콘텐츠인지 판단한다
+5. 필요한 경로로 데이터에 엑세스 한다.
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <h2 id="클라이언트-pc부터-웹-서버까지-2">클라이언트 PC부터 웹 서버까지</h2>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 웹 브라우저가 요청을 발행한다
+2. 이름 해석을 한다
+3. 웹 서버가 요청을 접수한다
+4. 웹 서버가 정적 콘텐츠인지 동적 콘텐츠인지 판단한다
+5. 필요한 경로로 데이터에 엑세스 한다.
+</code></pre></div>    </div>
+
+    <p><br />
+ <em>참고자료: <a href="https://opentutorials.org/module/4636">클릭이동</a></em>
+ <br />
+ <em>참고도서: Hello Coding 그림으로 개념을 이해하는 알고리즘</em></p>
+  </li>
+</ul>
+:ET
