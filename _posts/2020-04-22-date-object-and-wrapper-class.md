@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 데이터 객체와 Wrapper 클래스
+title: 자바스크립트 객체 표기법(JSON)
 category: TIL (Today I Learned)
 tags: [TIL (Today I Learned)]
 ---
