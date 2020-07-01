@@ -7,7 +7,13 @@
   <div class="sidebar-item">
     <div class="sidebar-personal-info">
       <div class="sidebar-personal-info-section">
-        <a href="https://github.com/aleatorik">
+        <a
+          href="https://github.com/aleatorik"
+          onclick="gtag('event', 'select_content', {
+          'event_category': 'github',
+          'event_label': 'clickBtn'
+        });"
+        >
           <img src="/public/profile.png" alt="profile picture" />
         </a>
       </div>
