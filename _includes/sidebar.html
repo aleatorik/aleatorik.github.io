@@ -7,13 +7,7 @@
   <div class="sidebar-item">
     <div class="sidebar-personal-info">
       <div class="sidebar-personal-info-section">
-        <a
-          href="https://github.com/aleatorik"
-          onclick="gtag('event', 'select_content', {
-          'event_category': 'github',
-          'event_label': 'clickBtn'
-        });"
-        >
+        <a href="https://github.com/aleatorik">
           <img src="/public/profile.png" alt="profile picture" />
         </a>
       </div>
@@ -30,14 +24,7 @@
           Contact : {% for contact in site.author.contact %} {% assign iconname
           = contact[0] %} {% if contact[0] == 'email' %} {% assign iconname =
           'envelope' %} {% endif %}
-          <a
-            href="{{ contact[1] }}"
-            class="github-btn"
-            onclick="gtag('event', 'select_content', {
-            'event_category': 'github',
-            'event_label': 'clickBtn'
-          });"
-          >
+          <a class="github-btn" href="{{ contact[1] }}">
             <i class="fa fa-{{ iconname }}" aria-hidden="true"></i>
           </a>
           |
