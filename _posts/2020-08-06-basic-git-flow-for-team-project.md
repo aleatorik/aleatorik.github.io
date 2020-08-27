@@ -26,19 +26,23 @@ git pull origin master -- 다른 사람의 업데이트, 작업한 것의 싱크
 마스터브랜치의 최신코드를 받아온다
 
 6.
-git pull merge master (충돌발생)
-(충돌해결)
+git checkout feature/daseulsong
+본인 작업 브랜치로 다시 이동
 
 7.
+git (pull) merge master
+master 브랜치 merge 하기 (충돌발생 시 충돌해결)
+
+8.
 git add
 git commit
 git push (본인의 작업 브랜치에서 push
 -- ex: git push origin feature/daseulsong)
 
-8.
+9.
 깃허브 해당 레포지토리에서 pull request를 날린다
 
-9.
+10.
 (리뷰받기)
 (리뷰 후 수정사항 있으면 본인 작업 브랜치에서 해당 작업 후 다시 add, commit, push)
 (고칠 내용이 없다면, merge 될 것임)
