@@ -1,0 +1,20 @@
+---
+layout: post
+title: map함수에서의 key 의미
+category: TIL (Today I Learned)
+tags: [TIL (Today I Learned)]
+---
+
+<br>
+
+map 함수는 많은 량의 데이터 배열을 return 값에 일일히 입력하지 않고 넘겨줄 수 있다는 점에서 React에서 핵심이 되는 함수라고 할 수 있다.
+React에서는 데이터가 변경되어 렌더링이 될때 불필요한 렌더링을 하지 않기 위해 전체를 렌더링 하지 않고 변경되는 부분만 렌더링한다.
+그렇기 때문에 어떠한 데이터가 변경되는지 React 에 알려주기 위해 key 값을 사용하며, key 값은 겹치지 않는 고유한 값이여야한다.
+<br>
+
+key 값은 map 함수의 두번재 인자로 넣어주고 return 값에 key={} 형태로 입력한다.
+map 함수 인자에 넣어준 값을 key={} 안에 동일하게 넣어준다면 자동으로 해당 배열의 index 값을 key 값으로 사용하며,
+index 값을 사용하고 싶지 않다면 전달되는 데이터 배열의 요소 중 겹치지 않는 유일한 값을 key 값으로 사용할 수 있다.
+(아래의 예시 참조)
+
+![key값으로 index값을 사용하지 않은 예](/public/img/map-key.png)
