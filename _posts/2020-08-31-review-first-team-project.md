@@ -60,7 +60,7 @@ tags: [TIL (Today I Learned)]
 - AWS RDS 구축
 - AWS S3 구축 및 이미지 업로더 연결
 
-### 프론트엔드
+## 프론트엔드
 
 **1. React.js**
 
@@ -71,7 +71,7 @@ tags: [TIL (Today I Learned)]
 
 - SASS의 모든 기능을 지원하면서 CSS 구문과 완전히 호환됨
 
-### 백엔드
+## 백엔드
 
 **1. Python**
 
@@ -94,7 +94,7 @@ tags: [TIL (Today I Learned)]
 
 <br>
 
-## 주요기능
+# 주요기능
 
 > 직접 구현한 기능은 ✅, 팀원이 구현한 기능은 ✔️로 표시
 
@@ -116,10 +116,10 @@ tags: [TIL (Today I Learned)]
 
 <br>
 
-## 구현과정
+# 구현과정
 
 Fetch를 통한 API 호출 / 동적 라우팅 / SVG 컴포넌트화 / 모달창 / Map 함수를 통한 상품 리스트 구현 / 장바구니 추가 기능(토큰인중 후 페이지 이동 함수)
 
 <br>
 
-## 마무리 하며..
+# 마무리 하며..
