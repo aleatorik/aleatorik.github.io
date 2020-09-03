@@ -13,25 +13,34 @@ tags: [TIL (Today I Learned)]
 
 <br>
 
-## 개발 인원
+# 개발 인원
 
-_프론트엔드_ [송다슬](https://github.com/aleatorik)(PM), [이호현](https://github.com/LeeHoHyun-hemtory), [황연욱](https://github.com/younuk23)<br>
-_백엔드_ [김기욱](https://github.com/keywookkim), [이지연](https://github.com/leejirun)
+프론트엔드: [송다슬](https://github.com/aleatorik)(PM), [이호현](https://github.com/LeeHoHyun-hemtory), [황연욱](https://github.com/younuk23)<br>
+백엔드: [김기욱](https://github.com/keywookkim), [이지연](https://github.com/leejirun)
 
 - Github [FrontEnd] [Repository](https://github.com/wecode-bootcamp-korea/11-DevX-frontend)
 - Github [Backend] [Repository](https://github.com/wecode-bootcamp-korea/11-DevX-backend)
 
 <br>
 
-## 기간
+# 데모 영상
+
+<iframe
+  src="https://www.youtube.com/embed/gG9l7pZVQ4Y"
+  style="width:100%; height:400px;"
+></iframe>
+
+<br>
+
+# 기간
 
 2020.08.18 - 2020.08.28 (약 2주)
 
 <br>
 
-## 사용 기술
+# 사용 기술
 
-### 공통
+## 공통
 
 1. HTTP
 
@@ -41,19 +50,15 @@ _백엔드_ [김기욱](https://github.com/keywookkim), [이지연](https://gith
 
 4. VScode
 
-5. Trello
+5. Trello - 프로젝트 스크럼 툴 ([링크](https://trello.com/b/7GVBeJ4W/wespace))
 
-- 프로젝트 스크럼 툴 ([링크](https://trello.com/b/7GVBeJ4W/wespace))
-
-  6. AWS
+6. PostMan - API 테스트 및 결과 내용 공유
+   
+7. AWS
 
 - AWS EC2 서버 배포
 - AWS RDS 구축
 - AWS S3 구축 및 이미지 업로더 연결
-
-  7. PostMan
-
-- API 테스트 및 결과 내용 공유
 
 ### 프론트엔드
 
@@ -113,7 +118,7 @@ _백엔드_ [김기욱](https://github.com/keywookkim), [이지연](https://gith
 
 ## 구현과정
 
-Fetch를 통한 API 호출 / 동적 라우팅 / SVG 컴포넌트화 / 모달창 / Map 함수를 통한 상품 리스트 구현 / 장바구니 추가 기능(토큰안중 후 페이지 이동 함수)
+Fetch를 통한 API 호출 / 동적 라우팅 / SVG 컴포넌트화 / 모달창 / Map 함수를 통한 상품 리스트 구현 / 장바구니 추가 기능(토큰인중 후 페이지 이동 함수)
 
 <br>
 
