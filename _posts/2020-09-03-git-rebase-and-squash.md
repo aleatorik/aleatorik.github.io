@@ -10,7 +10,6 @@ tags: [TIL (Today I Learned)]
 바꿈으로써 merge에 따른 수 많은 커밋들을 '압축'하고 꼭 필요한 커밋과 메세지(히스토리)만 남겨,
 프로젝트 git log 유지보수를 용이하게 할 수 있다.
 
-
 이를 위한 순차적인 깃 명령어들과 주의사항을 아래와 같이 정리하면 다음과 같다.
 
 ## **rebase 작업을 위한 전제조건**
@@ -26,11 +25,9 @@ tags: [TIL (Today I Learned)]
 ---
 
 ```
-1. 로컬 마스터 브랜치와 현재 작업 브랜치 최신화 (로컬 master 에서 pull 받아오기)
+1. 로컬 마스터 브랜치와 최신화
 $ git checkout master
 $ git pull origin master
-$ git checkout 작업브랜치이름
-$ git (pull) merge master
 
 ! 현재 시점에서 본인 작업브랜치 내용이 리모트 마스터의 내용과 다른게 없다면,
 본인 작업 브랜치에서 바로 pull 받아도 무방.
@@ -45,7 +42,8 @@ $ git commit
 
 
 3. 현재 본인 작업 브랜치에서 rebase 시작
-git rebase -i master
+$ git checkout 작업브랜치이름
+$ git rebase -i master
 
 
 4. (여기서 터미널 환경이 바뀌는데)
