@@ -1,8 +1,8 @@
 ---
 layout: post
 title: CSS 속성 순서에 대한 컨벤션
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: CSS
+tags: CSS
 ---
 
 ```

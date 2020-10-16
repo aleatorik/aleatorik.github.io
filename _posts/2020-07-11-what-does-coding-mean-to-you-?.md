@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 프로그래밍, 개발이 가지는 의미에 대해
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Etc
+tags: Etc
 ---
 
 <br>

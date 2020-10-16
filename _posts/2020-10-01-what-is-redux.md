@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Redux(리덕스)란 무엇인가?
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Javascript
+tags: Javascript
 ---
 
 <br>

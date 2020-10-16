@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 자바스크립트 객체 표기법(JSON)
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Javascript
+tags: Javascript
 ---
 
 <br>

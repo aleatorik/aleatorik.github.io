@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 협업을 위한 기본 Git Flow
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Git
+tags: Git
 ---
 
 ```

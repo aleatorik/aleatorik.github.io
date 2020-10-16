@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 자바스크립트 class 이름 추가
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Javascript
+tags: Javascript
 ---
 
 자바스크립트의 classList.add라는 메소드를 이용하면

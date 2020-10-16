@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: post
 title: Few things to consider before joining bootcamp
 category: TIL (Today I Learned)
@@ -33,4 +33,4 @@ tags: [TIL (Today I Learned)]
 ## _This approach is considered with an opportunity cost_
 
 What if Self-preparation for job market is failed and take another three months afterwards? <br>- Age matters a lot in this country.<br>
-Furthermore, if the possibility of entering good company with the bootcamp is higher than starting work few months earlier all by myself, the cost will be offset by the time I get done with my job for three months. So it's basically the exchange money for time.
+Furthermore, if the possibility of entering good company with the bootcamp is higher than starting work few months earlier all by myself, the cost will be offset by the time I get done with my job for three months. So it's basically the exchange money for time. -->

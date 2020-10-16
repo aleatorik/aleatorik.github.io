@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 부트캠프 과정의 1/3을 지나는 시점에서 (feat. 인스타그램 클론 프로젝트 후기)
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Etc
+tags: Etc
 ---
 
 <br>

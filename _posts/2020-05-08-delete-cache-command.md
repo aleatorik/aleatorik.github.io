@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 깃 캐시(Cache) 삭제 명령어
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Git
+tags: Git
 ---
 
 <br>

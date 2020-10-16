@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 탐색에 대한 알고리즘과 데이터 구조의 본질
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: CS
+tags: CS
 ---
 
 ## 탐색에 대한 알고리즘과 데이터 구조의 본질

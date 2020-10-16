@@ -1,8 +1,8 @@
 ---
 layout: post
 title: git rebase & sqaush 사용법과 명령어
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Git
+tags: Git
 ---
 
 <br>

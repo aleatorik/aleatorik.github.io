@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Express. js 키워드 정리
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Javascript
+tags: Javascript
 ---
 
 _~~중간에 다른 할 일들이 생겨서 도중에 Node.js 학습을 잠시 중단했었다~~_

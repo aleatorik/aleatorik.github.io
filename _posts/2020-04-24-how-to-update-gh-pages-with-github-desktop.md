@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 코드 변경 시, Github-page에 업데이트 하는 순서(feat. Github desktop)
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Git
+tags: Git
 ---
 
 아래의 설명은 Github-Desktop 이라는 GUI 기반 프로그램 사용을 기준으로 함.

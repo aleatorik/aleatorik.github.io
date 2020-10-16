@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 알고리즘_이진탐색과 빅오표기법
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: CS
+tags: CS
 ---
 
 ## 알고리즘 개념정리

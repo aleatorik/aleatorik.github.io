@@ -1,8 +1,8 @@
 ---
 layout: post
 title: CSS ::placeholder Selector(-webkit-input-placeholder)
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: CSS
+tags: CSS
 ---
 
 # 문제점

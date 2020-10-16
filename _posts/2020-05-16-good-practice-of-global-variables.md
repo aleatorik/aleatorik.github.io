@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 올바른 전역변수 사용법
-category: TIL (Today I Learned)
-tag: [TIL (Today I Learned)]
+category: Javascript
+tag: Javascript
 ---
 
 <br>

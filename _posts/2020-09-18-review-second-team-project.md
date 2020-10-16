@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 2차 팀 프로젝트 후기(feat. StockX)
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Etc
+tags: Etc
 ---
 
 <br>

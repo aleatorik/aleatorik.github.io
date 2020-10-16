@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 내 컴퓨터에서 작업한 내용을 원격저장소로 업로드하기
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Git
+tags: Git
 ---
 
 ### ~~(Git 프로그램이 PC에 설치 되어있는 가정 하에 진행)~~

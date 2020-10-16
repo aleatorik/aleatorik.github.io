@@ -1,8 +1,8 @@
 ---
 layout: post
 title: map함수에서의 key 의미
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Javascript
+tags: Javascript
 ---
 
 <br>

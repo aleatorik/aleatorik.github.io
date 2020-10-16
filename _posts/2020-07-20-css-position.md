@@ -1,8 +1,8 @@
 ---
 layout: post
 title: CSS의 Position 속성
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: CSS
+tags: CSS
 ---
 
 # Position이란?

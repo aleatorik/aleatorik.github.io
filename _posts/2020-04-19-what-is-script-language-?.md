@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 스크립트(Script) 언어 뜻
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Javascript
+tags: Javascript
 ---
 
 ## 스크립트 언어의 정의 :

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 1차 팀 프로젝트 후기(feat. SpaceX)
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Etc
+tags: Etc
 ---
 
 <br>
@@ -53,7 +53,6 @@ tags: [TIL (Today I Learned)]
 5. Trello - 프로젝트 스크럼 툴 ([링크](https://trello.com/b/7GVBeJ4W/wespace))
 
 6. PostMan - API 테스트 및 결과 내용 공유
-   
 7. AWS
 
 - AWS EC2 서버 배포

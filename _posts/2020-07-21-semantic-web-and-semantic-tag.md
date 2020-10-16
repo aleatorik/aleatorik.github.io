@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 시멘틱 웹과 시멘틱 태그
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: Web
+tags: Web
 ---
 
 ## 왜 필요한가?

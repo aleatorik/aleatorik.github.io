@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 자료구조 - 배열(리스트)
-category: TIL (Today I Learned)
-tags: [TIL (Today I Learned)]
+category: CS
+tags: CS
 ---
 
 # 자료 구조의 분류
