@@ -23,14 +23,6 @@ tags: Etc
 4. **Styled-Components**: js 파일 안에서 컴포넌트의 스타일을 지정하고, 컴포넌트의 상태를 props로 받아 스타일 적용을 다르게 할 수 있다.
 5. **Network**: fetch나 axios를 사용하여 서버 api에 요청하고 응답받은 데이터를 화면에 보여준다.
 
-# 개발 인원
-
-프론트엔드: [김동호](https://github.com/psy082?tab=overview&from=2020-09-01&to=2020-09-18), [류상욱](https://github.com/ryuinkyoto),[송다슬](https://github.com/aleatorik), [이영섭](https://github.com/seobie)(PM) <br>
-백엔드: [이태현](https://github.com/0417taehyun), [왕민욱](https://github.com/Minwook11?tab=overview&from=2020-09-01&to=2020-09-18), [이충희](https://github.com/choonghee-lee)
-
-- Github [FrontEnd] [Repository](https://github.com/wecode-bootcamp-korea/11-WeStock-frontend)
-- Github [Backend] [Repository](https://github.com/wecode-bootcamp-korea/11-WeStock-backend)
-
 <br>
 
 # 데모 영상
