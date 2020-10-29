@@ -11,7 +11,9 @@ tags: Etc
 
 > 스니커즈를 중심으로 한 온라인 경매 마켓 플레이스, StockX 웹사이트 클론 프로젝트
 
-<br>
+- 개발 기간 : 2020년 8월 31일 ~ 2020년 9월 11일(12일)<br>
+- 개발 인원 : Front-end 4명, Back-end 3명<br>
+- Github 주소 : [프론트엔드](https://github.com/aleatorik/westock)
 
 # 개발 인원
 
