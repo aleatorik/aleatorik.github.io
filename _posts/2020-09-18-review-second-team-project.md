@@ -25,7 +25,7 @@ tags: Etc
 
 # 데모 영상
 
-~~추후 업데이트 예정~~
+<iframe width="100%" height="400px" src="https://www.youtube.com/embed/6raMXpYz_oU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <!-- <iframe
   src="https://www.youtube.com/embed/gG9l7pZVQ4Y"
