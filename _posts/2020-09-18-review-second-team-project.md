@@ -15,6 +15,8 @@ tags: Etc
 - 개발 인원 : Front-end 4명, Back-end 3명<br>
 - Github 주소 : [프론트엔드](https://github.com/aleatorik/westock)
 
+<br>
+
 # 프로젝트 목적:
 
 1. **Progress**: Scrum 진행 방식에 대해 이해하고 적용해며 프로젝트를 진행한다.
@@ -28,17 +30,6 @@ tags: Etc
 # 데모 영상
 
 <iframe width="100%" height="400px" src="https://www.youtube.com/embed/6raMXpYz_oU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<!-- <iframe
-  src="https://www.youtube.com/embed/gG9l7pZVQ4Y"
-  style="width:100%; height:400px;"
-></iframe> -->
-
-<br>
-
-# 기간
-
-2020.08.31 - 2020.09.11 (12일)
 
 <br>
 
@@ -60,8 +51,11 @@ tags: Etc
 ## 3. 구현 기능
 
 - 네비게이션 바
-- 로그인 및 회원가입
+- **로그인 및 회원가입**
+  - **카카오 소셜로그인**
+  - **JWT 방식**
 - 메인 페이지
 - 상세 페이지
 - 상품 리스트 페이지
-- 사용자 개인 페이지
+- **사용자 개인 페이지**
+  - **fetch를 통한 데이터 통신 네트워크로 유저 상품입찰내역 렌더링**
