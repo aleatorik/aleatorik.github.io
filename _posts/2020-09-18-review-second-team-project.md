@@ -13,7 +13,8 @@ tags: Etc
 
 - 개발 기간 : 2020년 8월 31일 ~ 2020년 9월 11일(12일)<br>
 - 개발 인원 : Front-end 4명, Back-end 3명<br>
-- Github 주소 : [프론트엔드](https://github.com/aleatorik/westock)
+- [웹사이트(AWS 배포 완료)](http://13.209.5.217/)
+- [Github 주소](https://github.com/aleatorik/westock)
 
 <br>
 
