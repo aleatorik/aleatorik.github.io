@@ -38,7 +38,7 @@ tags: Etc
 ## 1. 기술 스택
 
 - HTML, CSS, JS(es6+)
-- React(CRA 세팅), Styled-Components(SCSS)
+- React(Hooks), Styled-Components
 
 ## 2. 협업 툴
 
