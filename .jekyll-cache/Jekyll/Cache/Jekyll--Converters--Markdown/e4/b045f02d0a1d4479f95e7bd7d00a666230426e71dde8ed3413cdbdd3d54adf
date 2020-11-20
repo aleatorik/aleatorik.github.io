@@ -1,0 +1,22 @@
+I"�<p><br /></p>
+
+<ul>
+  <li>
+    <p>Literal (리터럴)</p>
+
+    <ol>
+      <li>변수나 상수 등 어떠한 값을 명칭하는 것이 아니라 변수 및 상수에 <strong>저장되는 ‘값 자체’</strong>를 일컫는 말.
+변수나 상수가 메모리에 할당된 ‘공간’이라면 리터럴은 이 공간에 저장되는 ‘값’이다. 컴파일 시 프로그램 내에 정의되어 있는 그대로 정확히 해석되어야할 값을 의미.</li>
+      <li>코드 상에서 데이터를 표현하는 방식으로도 표현됨. 리터럴 표기법이라고 하며, 변수를 선언함과 동시에 그 값을 지정해주는 표기법.</li>
+    </ol>
+  </li>
+</ul>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">object</span> <span class="o">=</span> <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">daseul</span><span class="dl">"</span><span class="p">,</span> <span class="na">age</span><span class="p">:</span> <span class="dl">"</span><span class="s2">20</span><span class="dl">"</span> <span class="p">};</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p><del><em>(계속 업데이트 예정)</em></del></p>
+:ET

@@ -1,4 +1,4 @@
-I"�<p><br /></p>
+I")<p><br /></p>
 
 <h1 id="rest-api란">REST API란</h1>
 
@@ -125,7 +125,4 @@ ex:) <code class="highlighter-rouge">http://(도메인)/classes/2/students</code
 더 자세한 것은 ‘restful api design guidelines’같은 키워드로 검색해보기를 바란다.</p>
 
 <p>용도에 따라 REST API의 대안으로 떠오르는 GraphQL도 알아보면 좋을 것 같다.</p>
-
-<p><br />
-(<em>위의 내용은 REST API에 관한 해당 <a href="https://www.youtube.com/watch?v=iOueE9AXDQQ&amp;t=2s">참고자료</a> 영상을 글로 정리한 내용입니다</em>)</p>
 :ET
