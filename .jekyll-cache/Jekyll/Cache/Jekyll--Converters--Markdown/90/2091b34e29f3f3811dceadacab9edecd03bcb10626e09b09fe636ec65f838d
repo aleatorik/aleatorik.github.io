@@ -28,5 +28,5 @@ console.log(localName);
 <hr />
 
 <p>전역변수(glbal variable)는 <strong>어플리케이션이 실행되는 순간부터 끝날 때까지 항상 메모리에 탑재</strong> 되어있기 때문에
-<strong>촤소한</strong>으로 쓰는 것이 좋다. 가능하면 <strong>클래스나 함수, if, for문 등으로 필요한 부분에서만 정리해서 쓰는 것</strong>이 권장된다.</p>
+<strong>최소한</strong>으로 쓰는 것이 좋다. 가능하면 <strong>클래스나 함수, if, for문 등으로 필요한 부분에서만 정리해서 쓰는 것</strong>이 권장된다.</p>
 :ET
