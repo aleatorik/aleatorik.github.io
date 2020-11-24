@@ -32,6 +32,25 @@ const object = { name: "daseul", age: "20" };
 
 전통적으로 웹 페이지는 모든 페이지마다 HTML, CSS, Javascript 파일을 각기 가지고 있어야 했고, 따라서 페이지 간 이동을 할 때마다 HTML, CSS, Javascript 파일을 서버와 주고받았기 때문에 속도가 느릴 수 밖에 없었다. Single Page Application은 HTML, CSS, Javascript 파일을 최초 1회만 로드하고, 이후에는 자바스크립트 파일을 통해 DOM 또는 필요한 HTML 파일을 조작하는 방식을 취한다.
 
+## CI (Continuous Integration)
+
+지속적 통합(Continuous Integration)으로, 모든 개발이 끝난 이후에 코드 품질을 관리하는 고전적 방식의 단점을 해소하기위해 나타난 개념이다. 말그대로 개발을 하면서 ‘코드에대한 통합’을 ‘지속적’으로 진행함으로써 품질을 유지하자는 것
+
+## CD (Continuous Deploy)
+
+CD란 지속적 배포(Continuous Deploy 또는 Delivery)로써, 소프트웨어가 항상 신뢰 가능한 수준에서 배포될 수 있도록 지속적으로 관리하자는 개념이다. 사실 어려울 것 없이 그냥 CI의 연장선으로 생각하면 된다. 배포 이전에 테스트와 빌드는 필수적이기 때문에, 사실상 CD가 되려면 항상 CI가 선행되어야 한다고 봐도 무방하다.
+
+즉, CI 프로세스를 통해 개발중에 지속적으로 빌드와 테스트를 진행하고, 이를 통과한 코드에 대하여 테스트서버와 운영서버에 곧바로 그 내용을 배포해 반영하는 것이다. 이상적인 환경이라면 테스트와 빌드가 ‘지속적’으로 이루어지기 때문에, 배포 또한 자연스럽게 ‘지속적’으로 이루어지게 된다.
+
+[참고자료](https://itholic.github.io/qa-cicd/)
+
+![전통적인 개발 플로우](/public/img/withoutCiCd.png)
+**(전통적인 개발주기를 나타낸 그림)**
+
+![CI & CD 방식](/public/img/cicd.png)
+**(CI & CD 형태의 개발 프로세스 그림)**<br>
+_[이미지 출처](https://dzone.com/articles/learn-how-to-setup-a-cicd-pipeline-from-scratch)_
+
 <br>
 
-~~_(계속 업데이트 예정)_~~
+(마지막 업데이트 : 2020.11.24)
