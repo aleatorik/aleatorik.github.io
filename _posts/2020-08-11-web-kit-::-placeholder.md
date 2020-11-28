@@ -22,7 +22,7 @@ tags: CSS
 > - 여기서 -webkit은 Safari / Chorome을 위한 HTML, CSS 웹 브라우저 렌더링 엔진이다. 그러므로 다른 브라우저 위에서 동작하기 위해서는 아래와 같이 webkit자리에 그에 맞는 코드를 써야한다.
 
   <br>
-  ```
+  ```jsx
   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: pink;
   }
@@ -42,7 +42,7 @@ tags: CSS
 
  <br>
 
-```
+```jsx
 .search__bar::-webkit-input-placeholder {
 text-align: center;
 padding: 0px 24px;
@@ -55,7 +55,7 @@ margin-top: 8px;
 
 <br>
 
-```
+```jsx
 .search__bar::-webkit-input-placeholder {
 text-align: center;
 
