@@ -1,0 +1,69 @@
+I"�<h1 id="문제점">문제점</h1>
+
+<p>: <strong>Input 태그의 placeholder 텍스트의 중앙정렬을 하면 사용자가 입력하는 값 역시 중앙에서 시작됨</strong></p>
+
+<p><br /></p>
+
+<h1 id="해결방안">해결방안</h1>
+
+<p>: <strong>사용자가 입력하는 값이 input 박스의 왼쪽 가장자리(‘initial’ 위치)로 가야함</strong></p>
+
+<blockquote>
+  <ol>
+    <li>
+      <p>해당 input 태그의 class명으로 css에서 ‘text-align: center’로 주면 placeholder의 text와 사용자가 타이핑하는 값 모두 중앙에 위치하게 된다.</p>
+
+      <p><strong>2. <code class="highlighter-rouge">::-webkit-input-placeholder</code>을 사용하면, input태그의 placeholder 텍스트 값의 위치만 따로 설정할 수 있다.</strong></p>
+    </li>
+  </ol>
+
+  <ul>
+    <li>여기서 -webkit은 Safari / Chorome을 위한 HTML, CSS 웹 브라우저 렌더링 엔진이다. 그러므로 다른 브라우저 위에서 동작하기 위해서는 아래와 같이 webkit자리에 그에 맞는 코드를 써야한다.</li>
+  </ul>
+</blockquote>
+
+<p><br /></p>
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="p">::</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">input</span><span class="o">-</span><span class="nx">placeholder</span> <span class="p">{</span> <span class="cm">/* Chrome/Opera/Safari */</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nx">pink</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">::</span><span class="o">-</span><span class="nx">moz</span><span class="o">-</span><span class="nx">placeholder</span> <span class="p">{</span> <span class="cm">/* Firefox 19+ */</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nx">pink</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">:</span><span class="o">-</span><span class="nx">ms</span><span class="o">-</span><span class="nx">input</span><span class="o">-</span><span class="nx">placeholder</span> <span class="p">{</span> <span class="cm">/* IE 10+ */</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nx">pink</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">:</span><span class="o">-</span><span class="nx">moz</span><span class="o">-</span><span class="nx">placeholder</span> <span class="p">{</span> <span class="cm">/* Firefox 18- */</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nx">pink</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<ul>
+  <li>주의할 점은 아래와 같이 해당 input태그에 적용된 다른 속성값들과 같이 묶어서 적용할 경우, 해당 속성값들이 동작을 안하므로</li>
+</ul>
+
+<p><br /></p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">.</span><span class="nx">search__bar</span><span class="p">::</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">input</span><span class="o">-</span><span class="nx">placeholder</span> <span class="p">{</span>
+<span class="nx">text</span><span class="o">-</span><span class="nx">align</span><span class="p">:</span> <span class="nx">center</span><span class="p">;</span>
+<span class="nl">padding</span><span class="p">:</span> <span class="mi">0</span><span class="nx">px</span> <span class="mi">24</span><span class="nx">px</span><span class="p">;</span>
+<span class="nx">margin</span><span class="o">-</span><span class="nx">top</span><span class="p">:</span> <span class="mi">8</span><span class="nx">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+<ul>
+  <li>아래처럼 <code class="highlighter-rouge">::-webkit-input-placeholder{}</code>만 별도로 사용해야한다.</li>
+</ul>
+
+<p><br /></p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">.</span><span class="nx">search__bar</span><span class="p">::</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">input</span><span class="o">-</span><span class="nx">placeholder</span> <span class="p">{</span>
+<span class="nx">text</span><span class="o">-</span><span class="nx">align</span><span class="p">:</span> <span class="nx">center</span><span class="p">;</span>
+
+<span class="p">.</span><span class="nx">search__bar</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="mi">0</span><span class="nx">px</span> <span class="mi">24</span><span class="nx">px</span><span class="p">;</span>
+  <span class="nx">margin</span><span class="o">-</span><span class="nx">top</span><span class="p">:</span> <span class="mi">8</span><span class="nx">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET
