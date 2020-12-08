@@ -1,0 +1,24 @@
+I"^<p><em>팰린드롬: 앞에서 읽으나 뒤에서 읽으나 항상 똑같이 읽어지는 문자열을 의미</em></p>
+
+<h2 id="examples">Examples</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>num = 123
+return false
+=&gt; 뒤집은 모양이 321 이기 때문
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>num = 1221
+return true
+=&gt; 뒤집은 모양이 1221 이기 때문
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>num = -121
+return false
+=&gt; 뒤집은 모양이 121- 이기 때문
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>num = 10
+return false
+=&gt; 뒤집은 모양이 01 이기 때문
+</code></pre></div></div>
+:ET

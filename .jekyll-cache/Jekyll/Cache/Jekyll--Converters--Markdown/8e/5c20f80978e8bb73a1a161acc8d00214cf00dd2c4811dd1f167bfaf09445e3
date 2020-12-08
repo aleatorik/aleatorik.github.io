@@ -1,0 +1,74 @@
+I"�<p><br />
+<em>팰린드롬: 앞에서 읽으나 뒤에서 읽으나 항상 똑같이 읽어지는 문자열을 의미</em></p>
+
+<h2 id="examples">Examples</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>num = 123
+return false
+=&gt; 뒤집은 모양이 321 이기 때문
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>num = 1221
+return true
+=&gt; 뒤집은 모양이 1221 이기 때문
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>num = -121
+return false
+=&gt; 뒤집은 모양이 121- 이기 때문
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>num = 10
+return false
+=&gt; 뒤집은 모양이 01 이기 때문
+</code></pre></div></div>
+
+<h2 id="my-solution">My Solution</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">sameReverse</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">num</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+  <span class="c1">// value값을 비교하기 위해 배열로 각 자릿값을 쪼개야하므로 number -&gt; string</span>
+  <span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span>
+  <span class="c1">// 변환된 string을 배열로 쪼개기</span>
+  <span class="kd">let</span> <span class="nx">firstDigit</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">();</span>
+  <span class="kd">let</span> <span class="nx">lastDigit</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">();</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">-</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">firstDigit</span><span class="p">.</span><span class="nx">valueOf</span><span class="p">()</span> <span class="o">==</span> <span class="nx">lastDigit</span><span class="p">.</span><span class="nx">valueOf</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">num</span> <span class="o">=</span> <span class="o">-</span><span class="mi">101</span><span class="p">;</span>
+<span class="nx">sameReverse</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>방법1) ‘-‘가 있으면 제거하고 비교<br />
+방법2) ‘-‘가 있으면 무조건 false<br />
+indexOf, lastIndexOf
+=&gt; 첫번째인자와 마지막인자의 value가 같으면 true, else-&gt; false<br />
+lastIndexOf) 첫 번째 문자의 인덱스는 0이며, 마지막 문자의 인덱스는 str.length -1</p>
+</blockquote>
+
+<h2 id="another-solution">Another Solution</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">sameReverse</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="dl">""</span> <span class="o">+</span> <span class="nx">num</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">rev</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">""</span><span class="p">).</span><span class="nx">reverse</span><span class="p">();</span>
+  <span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">rev</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/,/gi</span><span class="p">,</span> <span class="dl">""</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">arr</span> <span class="o">===</span> <span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+:ET
