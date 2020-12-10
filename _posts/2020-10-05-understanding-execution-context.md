@@ -1,0 +1,31 @@
+---
+layout: post
+title: 실행 컨텍스트에 대한 이해
+category: Javascript
+tags: Javascript
+---
+
+## 실행 컨텍스트란?
+
+자바스크립트가 브라우저 내부에서 어떻게 동작하는지 알려면, 실행 컨텍스트에 대해 공부해야 한다.
+실행 컨텍스트와 콜스택은 다른 자바스크립트의 주요한 개념들, 이를테면 호이스팅, 스코프 그리고 클로저 등을 이해하는 데 필수이다.
+
+본론으로 돌아가서, 실행 컨텍스트란 간단하게 말하면 자바스크립트 코드가 실행되는 환경을 나타내는 추상적 개념이다. 자바스크립트 안에서 실행되는 모든 코드들은 어떤 실행 컨텍스트에서 돌아가고 있는 것이다.
+
+## 실행 컨텍스트의 종류
+
+- 전역공간에서 자동으로 생성되는 전역 컨텍스트(global execution context)
+- 함수 실행에 의한 컨텍스트
+- ~~eval 함수 실행에 의한 컨텍스트(여기서는 다루지 않음)~~
+
+## 콜스택
+
+![](https://miro.medium.com/max/3600/1*ACtBy8CIepVTOSYcVwZ34Q.png)
+
+<center>An Execution Context Stack for the above code.</center>
+
+<br>
+
+~~내용 추가 예정~~
+
+출처 : [블로그](https://blog.bitsrc.io/understanding-execution-context-and-execution-stack-in-javascript-1c9ea8642dd0)
