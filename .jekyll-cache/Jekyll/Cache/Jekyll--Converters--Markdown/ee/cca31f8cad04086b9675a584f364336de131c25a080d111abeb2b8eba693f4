@@ -1,0 +1,22 @@
+I"<h2 id="example">Example</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Input</span><span class="p">:</span> <span class="nx">words</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">java</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">golang</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">python</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">javascript</span><span class="dl">"</span><span class="p">]</span>
+<span class="nx">Output</span><span class="p">:</span> <span class="nx">javascript</span>
+<span class="nx">Explanation</span><span class="p">:</span> <span class="nx">the</span> <span class="nx">longest</span> <span class="nx">word</span> <span class="k">from</span> <span class="nx">the</span> <span class="nx">given</span> <span class="nx">array</span> <span class="nx">is</span> <span class="dl">"</span><span class="s2">javascript</span><span class="dl">"</span>
+</code></pre></div></div>
+
+<h2 id="my-solution">My Solution</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">find_longest_word</span><span class="p">(</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">longestStr</span> <span class="o">=</span> <span class="nx">list</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">longestStr</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">longestStr</span> <span class="o">=</span> <span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">longestStr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">find_longest_word</span><span class="p">([</span><span class="dl">"</span><span class="s2">java</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">golang</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">python</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">javascript</span><span class="dl">"</span><span class="p">]);</span>
+</code></pre></div></div>
+:ET
