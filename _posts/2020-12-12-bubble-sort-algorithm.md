@@ -6,6 +6,13 @@ tags: Algorithm
 ---
 
 <br>
+정렬 알고리즘은 순서가 없던 데이터를 순서대로 바꾸어 나열하는 알고리즘
+> [선택정렬](https://aleatorik.github.io/algorithm/2020/12/04/selection-sort-algorithm/),
+> **버블정렬**,
+> 삽입정렬,
+> [퀵정렬](https://aleatorik.github.io/algorithm/2020/12/05/quick-sort-algorithm/)
+
+<br>
 버블 정렬은 인접한 데이터를 교환해서 정렬하는 알고리즘.
 알고리즘의 정렬되는 모습이 마치 거품처럼 보인다고 해서 붙여진 이름.
 

@@ -6,7 +6,14 @@ tags: Algorithm
 ---
 
 <br>
-퀵 정렬은 분할 정복(divide and conquer) 방법을 통해 리스트를 정렬한다.
+정렬 알고리즘은 순서가 없던 데이터를 순서대로 바꾸어 나열하는 알고리즘
+> [선택정렬](https://aleatorik.github.io/algorithm/2020/12/04/selection-sort-algorithm/),
+> [버블정렬](https://aleatorik.github.io/algorithm/2020/12/12/bubble-sort-algorithm/),
+> 삽입정렬,
+> **퀵정렬**
+
+<br>
+퀵 정렬은 **분할 정복(divide and conquer)** 방법을 통해 리스트를 정렬한다.
 
 ## 분할정복이란?
 
