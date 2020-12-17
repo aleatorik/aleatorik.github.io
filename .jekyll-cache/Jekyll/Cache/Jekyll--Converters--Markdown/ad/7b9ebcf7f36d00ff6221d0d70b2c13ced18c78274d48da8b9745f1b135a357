@@ -1,0 +1,66 @@
+I"<h2 id="example">Example</h2>
+
+<p>input: 11<br />
+result: 1011</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">2</span> <span class="p">(</span><span class="mi">11</span><span class="p">)</span>  <span class="mi">1</span>
+<span class="mi">2</span>   <span class="mi">5</span>   <span class="mi">1</span>
+<span class="mi">2</span>   <span class="mi">2</span>   <span class="mi">0</span>
+    <span class="mi">1</span>     <span class="o">=&gt;</span> <span class="mi">1011</span>
+</code></pre></div></div>
+
+<h2 id="my-solution">My Solution</h2>
+
+<p><strong><em>with While Loop</em></strong></p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span> <span class="c1">// result를 문자열('')로 선언</span>
+<span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">result</span> <span class="o">+=</span> <span class="dl">"</span><span class="s2">0</span><span class="dl">"</span><span class="p">;</span> <span class="c1">// result = '0' + result; --result위치를 문자열 '0' 뒤에 배치</span>
+    <span class="c1">//-- 숫자가 아닌 문자열 '0'을 더해주는 것</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">result</span> <span class="o">+=</span> <span class="dl">"</span><span class="s2">1</span><span class="dl">"</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">x</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">x</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// -- 몫 구하기(2로 나눴을 때 나머지에 소수점 자리가 붙는 경우 버림)</span>
+
+  <span class="c1">// Math.ceil() : 소수점 올림</span>
+  <span class="c1">// Math.floor() : 소수점 버림</span>
+  <span class="c1">// Math.round() : 소수점 반올림</span>
+
+  <span class="c1">//&lt;&lt;계속해서 무한반복 되지 않도록 종료조건 걸기&gt;&gt;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="nx">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//6번줄의 '1'</span>
+    <span class="nx">result</span> <span class="o">+=</span> <span class="nb">String</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// String() --string값으로 변환</span>
+    <span class="k">break</span><span class="p">;</span> <span class="c1">// 종료가 되어야 하기 때문에 break 걸어줌</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">// console.log(result) -&gt; 결과값은 '1101', 즉 반대로 출력됨 -- 해결방안 1) 12번 줄의 주석 해결방안 2) split(),reverse(),join() 메소드 사용</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">""</span><span class="p">).</span><span class="nx">reverse</span><span class="p">().</span><span class="nx">join</span><span class="p">(</span><span class="dl">""</span><span class="p">));</span> <span class="c1">//split 메소드 사용 시 array 생성됨</span>
+<span class="c1">//join()-- 1,0,1,1 (default는 콤마로 나누어 문자열 리턴) join('')-- 1011 (문자열로 합침)</span>
+</code></pre></div></div>
+
+<h2 id="another-solution">Another Solution</h2>
+
+<p><strong><em>with Recursion</em></strong></p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">recursion</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="nx">num</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">String</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span> <span class="c1">// break역할 이기 때문에 아래 else 구문 필요없음</span>
+  <span class="p">}</span>
+  <span class="c1">//  return String(num % 2) + recursion(Math.floor(num / 2));</span>
+
+  <span class="c1">// console.log(recursion(11)); // 출력결과: 1101 (반대방향) -&gt; 역순으로 바꿔야함</span>
+  <span class="k">return</span> <span class="nx">recursion</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">num</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="nb">String</span><span class="p">(</span><span class="nx">num</span> <span class="o">%</span> <span class="mi">2</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">recursion</span><span class="p">(</span><span class="mi">11</span><span class="p">));</span>
+</code></pre></div></div>
+
+<p><strong><em>Explanation</em></strong></p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">recursion</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>  <span class="mi">101</span> <span class="o">+</span> <span class="nb">String</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// --최종 출력결과 : 1011 (line 32~38 결과로 1101 출력된 이유는 String()이 앞에 있었기 때문!)</span>
+<span class="nx">recursion</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>   <span class="mi">10</span> <span class="o">+</span> <span class="nb">String</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nx">recursion</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>   <span class="mi">1</span> <span class="o">+</span> <span class="nb">String</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nx">recursion</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>   <span class="mi">1</span>
+</code></pre></div></div>
+:ET

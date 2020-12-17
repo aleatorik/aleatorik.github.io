@@ -1,0 +1,90 @@
+I"W!<p><br />
+정렬 알고리즘은 순서가 없던 데이터를 순서대로 바꾸어 나열하는 알고리즘</p>
+<blockquote>
+  <p><a href="https://aleatorik.github.io/algorithm/2020/12/04/selection-sort-algorithm/">선택정렬</a>,
+<strong>버블정렬</strong>,
+삽입정렬,
+<a href="https://aleatorik.github.io/algorithm/2020/12/05/quick-sort-algorithm/">퀵정렬</a></p>
+</blockquote>
+
+<p><br />
+버블 정렬은 인접한 데이터를 교환해서 정렬하는 알고리즘.
+알고리즘의 정렬되는 모습이 마치 거품처럼 보인다고 해서 붙여진 이름.</p>
+
+<h2 id="example">Example</h2>
+
+<p>아래와 같은 정렬되지 않은 수가 있을 때, index 0 &lt;-&gt; 1 부터 교환하기 시작.
+인접한 두 수를 비교하여 더 큰 것을 우측으로 이동시킴.<br />
+<em><code class="highlighter-rouge">6 5 3 2 8</code></em>
+-&gt; <em><code class="highlighter-rouge">5 6 3 2 8</code></em></p>
+
+<p>그 다음은 index 1 &lt;-&gt; 2<br />
+<em><code class="highlighter-rouge">5 6 3 2 8</code></em>
+-&gt; <em><code class="highlighter-rouge">5 3 6 2 8</code></em></p>
+
+<p>그 다음은 index 2 &lt;-&gt; 3<br />
+<em><code class="highlighter-rouge">5 3 6 2 8</code></em>
+-&gt; <em><code class="highlighter-rouge">5 3 2 6 8</code></em></p>
+
+<p>그 다음은 index 3 &lt;-&gt; 4<br />
+<em><code class="highlighter-rouge">5 3 2 6 8</code></em>
+-&gt; <em><code class="highlighter-rouge">5 3 2 6 8</code></em><br />
+이렇게 제일 마지막 두 수 까지 비교하면, 제일 큰 수가 제일 마지막 index에 위치하는 것을 알 수 있다.</p>
+
+<p>다시 처음부터 시작.<br />
+<em><code class="highlighter-rouge">5 3 2 6 8</code></em>
+-&gt; <em><code class="highlighter-rouge">3 5 2 6 8</code></em></p>
+
+<p><em><code class="highlighter-rouge">3 5 2 6 8</code></em>
+-&gt; <em><code class="highlighter-rouge">3 2 5 6 8</code></em></p>
+
+<p><em><code class="highlighter-rouge">3 2 5 6 8</code></em>
+-&gt; <em><code class="highlighter-rouge">3 2 5 6 8</code></em><br />
+이번 교환에는 index 2까지 비교하고 멈추면 됨
+마지막 index는 이미 제일 큰 수가 정렬된 상태이기 때문.
+이런식으로 계속 비교하고 교체.</p>
+
+<h2 id="problem">Problem</h2>
+
+<p>숫자로 이루어진 배열을 주면, 버블정렬 알고리즘으로 배열을 정렬하시오.</p>
+
+<h2 id="my-solution">My Solution</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">bubbleSort</span> <span class="o">=</span> <span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">temp</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+        <span class="c1">// 두 수를 비교, 앞이 뒤 보다 크면 바꿔치기</span>
+        <span class="nx">temp</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+        <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+        <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">nums</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">bubbleSort</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<h2 id="another-solution">Another Solution</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">bubbleSort</span> <span class="o">=</span> <span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+        <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+        <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">nums</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bubbleSort</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]));</span>
+</code></pre></div></div>
+:ET

@@ -1,0 +1,92 @@
+I"q!<p><br />
+정렬 알고리즘은 순서가 없던 데이터를 순서대로 바꾸어 나열하는 알고리즘</p>
+<blockquote>
+  <p><a href="https://aleatorik.github.io/algorithm/2020/12/04/selection-sort-algorithm/">선택정렬</a>,
+<a href="https://aleatorik.github.io/algorithm/2020/12/12/bubble-sort-algorithm/">버블정렬</a>,
+삽입정렬,
+<strong>퀵정렬</strong></p>
+</blockquote>
+
+<p><br />
+퀵 정렬은 <strong>분할 정복(divide and conquer)</strong> 방법을 통해 리스트를 정렬한다.</p>
+
+<h2 id="분할정복이란">분할정복이란?</h2>
+
+<p>분할정복 알고리즘은 문제를 나눌 수 없을 때까지 나누어서 각각을 풀면서 다시 합쳐서 문제의 답을 얻는 알고리즘이다.</p>
+
+<h2 id="알고리즘-설계-순서">알고리즘 설계 순서</h2>
+
+<ol>
+  <li>Divide : 문제가 분할이 가능한 경우, 2개 이상의 문제로 나눈다.</li>
+  <li>Conquer: 나누어진 문제가 여전히 분할이 가능하면, 또 다시 Divide를 수행한다. 그렇지 않으면 문제를 푼다.</li>
+  <li>Combine: Conquer한 문제들을 통합하여 원래 문제의 답을 얻는다.</li>
+</ol>
+
+<blockquote>
+  <ul>
+    <li>문제를 제대로 나누면 Conquer하는 것은 쉽기 때문에 Divide를 제대로 하는 것이 중요</li>
+    <li>분할정복 알고리즘에서 재귀 알고리즘이 많이 사용되는데, 이 부분에서 성능 효율성이 떨어질 수 있음</li>
+  </ul>
+</blockquote>
+
+<p><img src="http://www.robasworld.com/wp-content/uploads/2017/02/QuickSort-261x300.png" alt="분할정복예시" />
+<code class="highlighter-rouge">Quick Sort Demonstration</code></p>
+
+<ol>
+  <li>리스트 가운데서 하나의 원소를 고른다. 이렇게 고른 원소를 <strong>피벗</strong>이라고 한다. (위 그림 상의 초록색 사람)</li>
+  <li>피벗 앞에는 피벗보다 값이 작은 모든 원소들이 오고, 피벗 뒤에는 피벗보다 값이 큰 모든 원소들이 오도록 피벗을 기준으로 리스트를 둘로 나눈다. 이렇게 리스트를 둘로 나누는 것을 <strong>분할</strong>이라고 한다. 분할을 마친 뒤에 피벗은 더 이상 움직이지 않는다.</li>
+  <li>분할된 두 개의 작은 리스트에 대해 재귀(Recursion)적으로 이 과정을 반복한다. 재귀는 리스트의 크기가 0이나 1이 될 때까지 반복된다.</li>
+</ol>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">mergeSort</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">arr</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kd">const</span> <span class="nx">mid</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">left</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">mid</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">right</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">mid</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="nx">merge</span><span class="p">(</span><span class="nx">mergeSort</span><span class="p">(</span><span class="nx">left</span><span class="p">),</span> <span class="nx">mergeSort</span><span class="p">(</span><span class="nx">right</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">merge</span><span class="p">(</span><span class="nx">left</span><span class="p">,</span> <span class="nx">right</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="nx">left</span><span class="p">.</span><span class="nx">length</span> <span class="o">&amp;&amp;</span> <span class="nx">right</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">left</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">right</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
+      <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">left</span><span class="p">.</span><span class="nx">shift</span><span class="p">());</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">right</span><span class="p">.</span><span class="nx">shift</span><span class="p">());</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">left</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">left</span><span class="p">.</span><span class="nx">shift</span><span class="p">());</span>
+  <span class="p">}</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">right</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">right</span><span class="p">.</span><span class="nx">shift</span><span class="p">());</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="dl">"</span><span class="s2">froh</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">goose</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">horse</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">polar bear</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">zebra</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">gorilla</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">giraffe</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">chicken</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">elephant</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mergeSort</span><span class="p">(</span><span class="nx">arr</span><span class="p">));</span>
+<span class="c1">//['froh', 'goose', 'gorilla', 'giraffe', 'chicken', 'horse', 'polar bear', 'zebra', 'elephant']</span>
+</code></pre></div></div>
+
+<p><br />
+출처: <a href="https://ko.wikipedia.org/wiki/%EC%8B%9C%EB%A7%A8%ED%8B%B1_%EC%9B%B9">위키피디아</a>,
+<a href="https://www.robasworld.com/sorting-algorithms/">사진자료</a>,
+<a href="https://janghw.tistory.com/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Divide-and-Conquer-%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5">블로그</a></p>
+:ET

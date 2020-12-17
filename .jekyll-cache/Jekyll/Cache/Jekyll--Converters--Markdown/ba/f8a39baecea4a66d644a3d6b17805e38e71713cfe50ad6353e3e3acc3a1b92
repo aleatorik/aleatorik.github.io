@@ -1,0 +1,83 @@
+I"R!<p><br />
+정렬 알고리즘은 순서가 없던 데이터를 순서대로 바꾸어 나열하는 알고리즘</p>
+<blockquote>
+  <p>선택정렬,
+<a href="https://aleatorik.github.io/algorithm/2020/12/12/bubble-sort-algorithm/">버블정렬</a>,
+삽입정렬,
+<a href="https://aleatorik.github.io/algorithm/2020/12/05/quick-sort-algorithm/">퀵정렬</a></p>
+</blockquote>
+
+<p><br />
+<strong>선택정렬</strong>은 정렬되지 않은 데이터 중 가장 작은 데이터를 선택해서
+맨 앞에서부터 순서대로 정렬해 나가는 알고리즘이다.</p>
+
+<p><em>“It has O(n2) time complexity, making it inefficient on large lists, and generally performs worse than the similar insertion sort.
+Selection sort is noted for its simplicity, and it has performance advantages over more complicated algorithms in certain situations, particularly where auxiliary memory is limited.”</em></p>
+
+<p>(“O(n2) 시간복잡도를 가지고, 큰 리스트에서 비효율적이고 일반적으로 비슷한 삽입정렬에 비해 좋지 않은 성능을 갖는다.
+몇몇의 특정 상황에서 다른 복잡한 알고리즘보다 더 좋은 성능상의 이점을 갖는데 특히, 보조 메모리가 제한적인 경우에 그렇다.”)</p>
+
+<h2 id="알고리즘-분석">알고리즘 분석</h2>
+
+<ul>
+  <li>정렬을 해야하는 배열은 [7,5,4,2] 이다.<br /></li>
+  <li>첫 번째 loop에서는 index 0부터 3까지 확인하며 가장 작은 수를 찾는다.<br /></li>
+  <li>2 이므로 index 0의 7과 교체. -&gt; [2,5,4,7]<br /></li>
+  <li>두 번째는 index 1부터 3까지 확인하며 가장 작은 수를 찾는다.<br /></li>
+  <li>4이므로 index 1의 5와 교체. -&gt; [2,4,5,7]<br /></li>
+  <li>세 번째는 index 2부터 3까지.. 이런식으로 가장 작은 수를 선택해서 순서대로 교체하는 것을 선택정렬이라고 한다.</li>
+</ul>
+
+<h2 id="example">Example</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>nums라는 정렬되지 않은 숫자 배열이 주어지면, 오름차순(1,2,3..10) 으로 정렬된 배열을 return하라.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="my-solution">My Solution</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">selectionSort</span> <span class="o">=</span> <span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">minIdx</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">minIdx</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span><span class="p">])</span> <span class="p">{</span>
+        <span class="nx">minIdx</span> <span class="o">=</span> <span class="nx">j</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">let</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">minIdx</span><span class="p">];</span>
+    <span class="nx">nums</span><span class="p">[</span><span class="nx">minIdx</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">nums</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="another-solution">Another Solution</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">selectionSort</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">minIndex</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">minIndex</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span><span class="p">])</span> <span class="p">{</span>
+        <span class="nx">minIndex</span> <span class="o">=</span> <span class="nx">j</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">minIndex</span> <span class="o">!==</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">swap</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">minIndex</span><span class="p">];</span>
+      <span class="nx">nums</span><span class="p">[</span><span class="nx">minIndex</span><span class="p">]</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+      <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">swap</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">i</span><span class="p">}</span><span class="s2">회전: </span><span class="p">${</span><span class="nx">nums</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">nums</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">selectionSort</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]));</span>
+</code></pre></div></div>
+:ET
