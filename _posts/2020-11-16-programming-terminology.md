@@ -51,6 +51,44 @@ CD란 지속적 배포(Continuous Deploy 또는 Delivery)로써, 소프트웨어
 **(CI & CD 형태의 개발 프로세스 그림)**<br>
 _[이미지 출처](https://dzone.com/articles/learn-how-to-setup-a-cicd-pipeline-from-scratch)_
 
+## Lexical scoping
+
+(**스코프는 함수를 호출할 때가 아니라 선언할 때 생긴다**)
+
+어떤 스코프(유효범위) 밖에서 정의된 한 변수가 그 스코프 안으로 접근가능한 것을 뜻한다.
+
+```jsx
+let str = "JavaScript";
+
+const lexicalScope = () => {
+  console.log(str);
+};
+lexicalScopeun();
+
+// output: JavaScript
+```
+
+추가 설명을 위한 예시)
+
+```jsx
+var name = "dan";
+function log() {
+  console.log(name);
+}
+
+function wrapper() {
+  var name = "alex";
+  log();
+}
+wrapper();
+```
+
+log 안의 name은 wrapper 안의 지역변수 name이 아니라, 전역변수 name을 가리키고 있는 것이다. 이런 것을 lexical scoping이라고 한다.
+
+함수를 처음 선언하는 순간, 함수 내부의 변수는 자기 스코프로부터 가장 가까운 곳(상위 범위에서)에 있는 변수를 계속 참조하게 된다. 위의 예시에서는 log 함수 안의 name 변수는 선언 시 가장 가까운 전역변수 name을 참조하게 된다. 그래서 wrapper 안에서 log를 호출해도 지역변수 name='alex'를 참조하는 게 아니라 그대로 전역변수 name의 값인 dan이 나오는 것이다.
 <br>
 
-(마지막 업데이트 : 2020.11.24)
+[자료출처](https://www.zerocho.com/category/Javascript/post/5740531574288ebc5f2ba97e)
+
+<br>
+(마지막 업데이트 : 2020.12.27)
