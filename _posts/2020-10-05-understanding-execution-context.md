@@ -27,7 +27,7 @@ tags: Javascript
 
 > 스코프 체인 : 전역변수와 지역변수의 관계에서 스코프 체인(scope chain)이란 개념이 나옴. 즉 내부 함수에서는 외부 함수의 변수에 접근 가능하지만 외부 함수에서는 내부 함수의 변수에 접근할 수 없다. 꼬리를 물고 계속 범위를 넓히면서 찾는 관계를 스코프 체인이라고 부릅니다.
 
-## 콜스택
+## 콜스택 = calling stack = Execution stack
 
 컨텍스트 스택은 아래와 같이 형성된다.
 ![](https://miro.medium.com/max/3600/1*ACtBy8CIepVTOSYcVwZ34Q.png)
@@ -41,6 +41,30 @@ tags: Javascript
 
 <br>
 
-~~내용 추가 예정~~
+| 자, 그럼 실제로 아래의 예시 코드가 브라우저에 실행될 때, 어떤 순서로 화면에 출력되는지 예측해보자.
 
-참고자료 : <br>[https://blog.bitsrc.io/understanding-execution-context-and-execution-stack-in-javascript-1c9ea8642dd0](https://blog.bitsrc.io/understanding-execution-context-and-execution-stack-in-javascript-1c9ea8642dd0), [https://www.zerocho.com/category/JavaScript/post/5741d96d094da4986bc950a0](https://www.zerocho.com/category/JavaScript/post/5741d96d094da4986bc950a0)
+```jsx
+let a = "Hello World!";
+
+function first() {
+  console.log("Inside first function");
+  second();
+  console.log("Again inside first function");
+}
+function second() {
+  console.log("Inside second function");
+}
+first();
+console.log("Inside Global Execution Context");
+```
+
+```jsx
+// 1 Inside first function
+// 2 Inside second function
+// 3 Again inside first function
+// 4 Inside Global Execution Context
+```
+
+지금까지 자바스크립트 엔진이 실행 컨텍스트를 어떻게 관리하는지에 대해 알아보았다.
+
+_Reference : <br>[https://blog.bitsrc.io/understanding-execution-context-and-execution-stack-in-javascript-1c9ea8642dd0](https://blog.bitsrc.io/understanding-execution-context-and-execution-stack-in-javascript-1c9ea8642dd0), [https://www.zerocho.com/category/JavaScript/post/5741d96d094da4986bc950a0](https://www.zerocho.com/category/JavaScript/post/5741d96d094da4986bc950a0)_
