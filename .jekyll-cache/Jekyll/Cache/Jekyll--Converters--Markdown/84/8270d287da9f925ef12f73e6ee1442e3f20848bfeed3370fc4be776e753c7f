@@ -1,0 +1,76 @@
+I"�<h2 id="실행-컨텍스트란">실행 컨텍스트란?</h2>
+
+<p>자바스크립트가 브라우저 내부에서 어떻게 동작하는지 알려면, 실행 컨텍스트에 대해 공부해야 한다.
+실행 컨텍스트와 콜스택은 다른 자바스크립트의 주요한 개념들, 이를테면 호이스팅, 스코프 그리고 클로저 등을 이해하는 데 필수이다.</p>
+
+<p>본론으로 돌아가서, 실행 컨텍스트란 간단하게 말하면 자바스크립트 코드가 실행되는 환경을 나타내는 추상적 개념이다. 자바스크립트 안에서 실행되는 모든 코드들은 어떤 실행 컨텍스트에서 돌아가고 있는 것이다.</p>
+
+<h2 id="실행-컨텍스트의-종류">실행 컨텍스트의 종류</h2>
+
+<ul>
+  <li>전역공간에서 자동으로 생성되는 전역 컨텍스트(global execution context)</li>
+  <li>함수 실행에 의한 컨텍스트</li>
+  <li><del>eval 함수 실행에 의한 컨텍스트(여기서는 다루지 않음)</del></li>
+</ul>
+
+<h2 id="컨텍스트의-원칙-네-가지">컨텍스트의 원칙 네 가지</h2>
+
+<ul>
+  <li>먼저 전역 컨텍스트 하나 생성 후, 함수 호출 시마다 컨텍스트가 생김</li>
+  <li>컨텍스트 생성 시 컨텍스트 안에 변수객체(arguments, variable), scope chain, this가 생성</li>
+  <li>컨텍스트 생성 후 함수가 실행되는데, 사용되는 변수들은 변수 객체 안에서 값을 찾고, 없다면 스코프 체인을 따라 올라가며 찾음</li>
+  <li>함수 실행이 마무리되면 해당 컨텍스트는 사라집니다.(클로저 제외) 페이지가 종료되면 전역 컨텍스트가 사라짐</li>
+</ul>
+
+<blockquote>
+  <p>스코프 체인 : 전역변수와 지역변수의 관계에서 스코프 체인(scope chain)이란 개념이 나옴. 즉 내부 함수에서는 외부 함수의 변수에 접근 가능하지만 외부 함수에서는 내부 함수의 변수에 접근할 수 없다. 꼬리를 물고 계속 범위를 넓히면서 찾는 관계를 스코프 체인이라고 부릅니다.</p>
+</blockquote>
+
+<h2 id="콜스택--calling-stack--execution-stack">콜스택 = calling stack = Execution stack</h2>
+
+<p>컨텍스트 스택은 아래와 같이 형성된다.
+<img src="https://miro.medium.com/max/3600/1*ACtBy8CIepVTOSYcVwZ34Q.png" alt="" /></p>
+
+<center>An Execution Context Stack for the above code.</center>
+<p><br /></p>
+<ol>
+  <li>실행 가능한 코드로 컨트롤이 이동하면 논리적 스택 구조를 가지는 빈 실행 컨텍스트 스택이 생성된다.</li>
+  <li>전역 코드로 컨트롤이 이동하면 전역 실행 컨텍스트(Global EC)가 생성되고 스택에 쌓인다. 이 전역 실행 컨텍스트는 App 종료 시기까지 유효하다.</li>
+  <li>함수를 호출하면 해당 함수의 코드로 컨트롤이 이동하고, 함수의 실행 컨텍스트가 생성되고 스택에 쌓인다.</li>
+  <li>함수 실행이 끝나면 해당 함수의 실행 컨텍스트가 파기되고, 직전 실행 컨텍스트로 컨트롤이 이동한다.</li>
+</ol>
+
+<p><br /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>자, 그럼 실제로 아래의 예시 코드가 브라우저에 실행될 때, 어떤 순서로 화면에 출력되는지 예측해보자.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Hello World!</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">first</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Inside first function</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">second</span><span class="p">();</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Again inside first function</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">second</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Inside second function</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">first</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Inside Global Execution Context</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 1 Inside first function</span>
+<span class="c1">// 2 Inside second function</span>
+<span class="c1">// 3 Again inside first function</span>
+<span class="c1">// 4 Inside Global Execution Context</span>
+</code></pre></div></div>
+
+<p>지금까지 자바스크립트 엔진이 실행 컨텍스트를 어떻게 관리하는지에 대해 알아보았다.</p>
+
+<p><em>Reference : <br /><a href="https://blog.bitsrc.io/understanding-execution-context-and-execution-stack-in-javascript-1c9ea8642dd0">https://blog.bitsrc.io/understanding-execution-context-and-execution-stack-in-javascript-1c9ea8642dd0</a>, <a href="https://www.zerocho.com/category/JavaScript/post/5741d96d094da4986bc950a0">https://www.zerocho.com/category/JavaScript/post/5741d96d094da4986bc950a0</a></em></p>
+:ET

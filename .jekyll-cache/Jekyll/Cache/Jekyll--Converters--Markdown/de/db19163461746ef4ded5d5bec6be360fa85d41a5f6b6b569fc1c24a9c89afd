@@ -1,4 +1,4 @@
-I"�<h2 id="literal-리터럴">Literal (리터럴)</h2>
+I"7<h2 id="literal-리터럴">Literal (리터럴)</h2>
 
 <ol>
   <li>변수나 상수 등 어떠한 값을 명칭하는 것이 아니라 변수 및 상수에 <strong>저장되는 ‘값 자체’</strong>를 일컫는 말.
@@ -49,7 +49,43 @@
 <strong>(CI &amp; CD 형태의 개발 프로세스 그림)</strong><br />
 <em><a href="https://dzone.com/articles/learn-how-to-setup-a-cicd-pipeline-from-scratch">이미지 출처</a></em></p>
 
-<p><br /></p>
+<h2 id="lexical-scoping">Lexical scoping</h2>
 
-<p>(마지막 업데이트 : 2020.11.24)</p>
+<p>(<strong>스코프는 함수를 호출할 때가 아니라 선언할 때 생긴다</strong>)</p>
+
+<p>어떤 스코프(유효범위) 밖에서 정의된 한 변수가 그 스코프 안으로 접근가능한 것을 뜻한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">JavaScript</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">lexicalScope</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+<span class="p">};</span>
+<span class="nx">lexicalScopeun</span><span class="p">();</span>
+
+<span class="c1">// output: JavaScript</span>
+</code></pre></div></div>
+
+<p>추가 설명을 위한 예시)</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">dan</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">log</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">wrapper</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">alex</span><span class="dl">"</span><span class="p">;</span>
+  <span class="nx">log</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nx">wrapper</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>log 안의 name은 wrapper 안의 지역변수 name이 아니라, 전역변수 name을 가리키고 있는 것이다. 이런 것을 lexical scoping이라고 한다.</p>
+
+<p>함수를 처음 선언하는 순간, 함수 내부의 변수는 자기 스코프로부터 가장 가까운 곳(상위 범위에서)에 있는 변수를 계속 참조하게 된다. 위의 예시에서는 log 함수 안의 name 변수는 선언 시 가장 가까운 전역변수 name을 참조하게 된다. 그래서 wrapper 안에서 log를 호출해도 지역변수 name=’alex’를 참조하는 게 아니라 그대로 전역변수 name의 값인 dan이 나오는 것이다.
+<br /></p>
+
+<p><a href="https://www.zerocho.com/category/Javascript/post/5740531574288ebc5f2ba97e">자료출처</a></p>
+
+<p><br />
+(마지막 업데이트 : 2020.12.27)</p>
 :ET
