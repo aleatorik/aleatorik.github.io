@@ -1,0 +1,53 @@
+I"g<p><br />
+Given a string s, find the length of the longest substring without repeating characters.</p>
+
+<h2 id="example-1">Example 1:</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Input</span><span class="p">:</span> <span class="nx">s</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">abcabcbb</span><span class="dl">"</span>
+<span class="nx">Output</span><span class="p">:</span> <span class="mi">3</span>
+<span class="nx">Explanation</span><span class="p">:</span> <span class="nx">The</span> <span class="nx">answer</span> <span class="nx">is</span> <span class="dl">"</span><span class="s2">abc</span><span class="dl">"</span><span class="p">,</span> <span class="kd">with</span> <span class="nx">the</span> <span class="nx">length</span> <span class="k">of</span> <span class="mi">3</span><span class="p">.</span>
+</code></pre></div></div>
+
+<h2 id="example-2">Example 2:</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Input</span><span class="p">:</span> <span class="nx">s</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">bbbbb</span><span class="dl">"</span>
+<span class="nx">Output</span><span class="p">:</span> <span class="mi">1</span>
+<span class="nx">Explanation</span><span class="p">:</span> <span class="nx">The</span> <span class="nx">answer</span> <span class="nx">is</span> <span class="dl">"</span><span class="s2">b</span><span class="dl">"</span><span class="p">,</span> <span class="kd">with</span> <span class="nx">the</span> <span class="nx">length</span> <span class="k">of</span> <span class="mi">1</span><span class="p">.</span>
+</code></pre></div></div>
+
+<h2 id="example-3">Example 3:</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Input</span><span class="p">:</span> <span class="nx">s</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">pwwkew</span><span class="dl">"</span>
+<span class="nx">Output</span><span class="p">:</span> <span class="mi">3</span>
+<span class="nx">Explanation</span><span class="p">:</span> <span class="nx">The</span> <span class="nx">answer</span> <span class="nx">is</span> <span class="dl">"</span><span class="s2">wke</span><span class="dl">"</span><span class="p">,</span> <span class="kd">with</span> <span class="nx">the</span> <span class="nx">length</span> <span class="k">of</span> <span class="mi">3</span><span class="p">.</span>
+<span class="nx">Notice</span> <span class="nx">that</span> <span class="nx">the</span> <span class="nx">answer</span> <span class="nx">must</span> <span class="nx">be</span> <span class="nx">a</span> <span class="nx">substring</span><span class="p">,</span> <span class="dl">"</span><span class="s2">pwke</span><span class="dl">"</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">subsequence</span> <span class="nx">and</span> <span class="nx">not</span> <span class="nx">a</span> <span class="nx">substring</span><span class="p">.</span>
+</code></pre></div></div>
+
+<h2 id="my-solution">My Solution</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">getLengthOfStr</span> <span class="o">=</span> <span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">sliceStr</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="kd">let</span> <span class="nx">lastStr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">sliceStr</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">str</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">sliceStr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">str</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="nx">lastStr</span> <span class="o">&lt;</span> <span class="nx">sliceStr</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">lastStr</span> <span class="o">=</span> <span class="nx">sliceStr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">sliceStr</span> <span class="o">=</span> <span class="nx">sliceStr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">sliceStr</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">str</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+      <span class="nx">sliceStr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">str</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">lastStr</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">sttrg</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">getLengthOfStr</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><br />
+Source: <a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">https://leetcode.com/problems/longest-substring-without-repeating-characters/</a></p>
+:ET
