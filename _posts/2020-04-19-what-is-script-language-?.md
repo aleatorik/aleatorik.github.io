@@ -48,4 +48,4 @@ window.open('221457352867')
 2. 아주 정밀한 산술 연산을 해야할 때
 
 <br>
-*자료출처: [클릭이동](https://m.blog.naver.com/PostView.nhn?blogId=guseod24&logNo=221463125647&categoryNo=41proxyReferer=https%3A%2F%2Fwww.google.com%2F_)*
+*자료출처: [블로그](https://m.blog.naver.com/PostView.nhn?blogId=guseod24&logNo=221463125647&categoryNo=41proxyReferer=https%3A%2F%2Fwww.google.com%2F_)*
