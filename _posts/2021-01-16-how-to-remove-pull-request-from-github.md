@@ -36,7 +36,7 @@ repo 주인과 PR한 당사자는 PR을 'close'할 수는 있지만 이 경우, 
 <br>
 
 ```jsx
-1. 이미 해당 PR을 closed한 상태면 repoen 한다.
+1. 이미 해당 PR을 closed한 상태면 reopen 한다.
 
 2. 로컬에서 checkout 명령어로 PR한 브랜치로 이동한다.
 
