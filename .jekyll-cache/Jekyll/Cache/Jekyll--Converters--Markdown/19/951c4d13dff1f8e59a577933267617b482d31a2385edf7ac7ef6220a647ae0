@@ -1,0 +1,57 @@
+I"�<p><br /></p>
+
+<h1 id="들어가기에-앞서">들어가기에 앞서</h1>
+
+<p><br /></p>
+
+<p>어떤 이유로든 fork한 repo(repository)에 PR(Pull request)한 내용을 삭제하고 싶을 수 있다.
+가령, 프로젝트 진행에 따라 일전에 한 커밋내용들이 더이상 유효하지 않을 수 있고 그것이 없는게 더 바람직할 수 도 있다.</p>
+
+<p>하지만 안타깝게도 공식적으로 <strong>본인이 PR한 내용을 삭제할 수 있는 방법은 없는 것</strong>으로 알려져 있다.
+repo 주인과 PR한 당사자는 PR을 ‘close’할 수는 있지만 이 경우, <strong>커밋로그는 여전히 남아있다!</strong></p>
+
+<p>이는 개발에서 발생하는 어떤 사건 또는 기록을 거부하거나 숨기는 것을 지양하는 깃허브 서비스 약관에 의거한 정책이라고 한다. 다만 민감하고 심각한 이슈와 관련하여 삭제가 필요한 예외적인 경우에는 깃허브 측에서 직접 해당 문제를 처리해준다고 하니<em>support@github.com</em>에 이메일을 넣어보는 것도 나쁘지 않을 것 같다.</p>
+
+<p><br /></p>
+
+<h1 id="깃허브의-이메일-기다리는-것-외에는-정말-방법이-없을까">깃허브의 이메일 기다리는 것 외에는 정말 방법이 없을까?</h1>
+
+<p><br /></p>
+
+<p>결론적으로 이 포스팅에서는 ‘close’했다는 내역 자체는 삭제 못하지만, <strong>그 안의 모든 커밋로그를 지울 수 있는 방법</strong>을 다룬다.</p>
+
+<p>다행이도 <code class="highlighter-rouge">git revert</code> , <code class="highlighter-rouge">git rebase</code> 등등 이를 위한 여러가지 기술적인 차선책들이 인터넷 상에 많이 소개되어있지만, 본 포스팅에서는 필자가 직접 테스트 해 본 방법을 소개한다.</p>
+
+<p><br /></p>
+
+<h1 id="pr의-모든-커밋로그를-삭제하는-방법">PR의 모든 커밋로그를 삭제하는 방법</h1>
+
+<p><br /></p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">1</span><span class="p">.</span> <span class="err">이미</span> <span class="err">해당</span> <span class="nx">PR</span><span class="err">을</span> <span class="nx">closed</span><span class="err">한</span> <span class="err">상태면</span> <span class="nx">reopen</span> <span class="err">한다</span><span class="p">.</span>
+
+<span class="mi">2</span><span class="p">.</span> <span class="err">로컬에서</span> <span class="nx">checkout</span> <span class="err">명령어로</span> <span class="nx">PR</span><span class="err">한</span> <span class="err">브랜치로</span> <span class="err">이동한다</span><span class="p">.</span>
+
+<span class="mi">3</span><span class="p">.</span> <span class="s2">`git reset --hard`</span> <span class="err">명령어로</span>
+<span class="nx">remote</span><span class="err">로</span> <span class="nx">pushed</span><span class="err">된</span> <span class="err">모든</span> <span class="err">이</span> <span class="err">전</span> <span class="err">커밋들을</span> <span class="err">커밋</span> <span class="err">하기</span> <span class="err">전</span> <span class="err">상태로</span> <span class="err">돌려놓는다</span><span class="p">.</span>
+
+<span class="p">(</span><span class="err">어떤</span> <span class="err">특정</span> <span class="err">커밋로그까지만</span> <span class="err">삭제할</span> <span class="err">떄는</span> <span class="s2">`git log`</span> <span class="err">통해서</span> <span class="err">해당</span> <span class="err">커밋의</span> <span class="nx">id</span><span class="err">를</span> <span class="err">확인</span> <span class="err">후</span>
+<span class="s2">`git reset --hard &lt;sha1-commit-id&gt;`</span><span class="err">를</span> <span class="err">실행한다</span><span class="p">)</span>
+
+<span class="mi">4</span><span class="p">.</span> <span class="s2">`git push origin HEAD --force`</span><span class="err">로</span> <span class="err">기존의</span> <span class="err">모든</span> <span class="err">커밋이</span> <span class="err">푸시되기</span> <span class="err">전</span> <span class="err">상태를</span>
+<span class="nx">remote</span><span class="err">로</span> <span class="err">푸시한다</span><span class="p">.</span>
+
+<span class="mi">5</span><span class="p">.</span> <span class="err">본인</span> <span class="err">깃허브</span> <span class="err">계정으로</span> <span class="err">가서</span> <span class="nx">PR</span><span class="err">을</span> <span class="err">날린</span> <span class="err">해당</span> <span class="nx">repo</span><span class="err">를</span> <span class="err">삭제한다</span><span class="p">.</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>모든 로그가 아닌 <strong>일부 로그만 지우고 싶은 경우</strong>는 이 <a href="https://stackoverflow.com/questions/36168839/how-to-remove-commits-from-a-pull-request">링크</a>를 참조하기 바란다.</p>
+
+<p><br /></p>
+
+<h4 id="reference">Reference</h4>
+
+<p><a href="https://stackoverflow.com/questions/18318097/delete-a-closed-pull-request-from-github">https://stackoverflow.com/questions/18318097/delete-a-closed-pull-request-from-github</a><br />
+<a href="https://articles.assembla.com/en/articles/2941346-how-to-delete-commits-from-a-branch-in-git">https://articles.assembla.com/en/articles/2941346-how-to-delete-commits-from-a-branch-in-git</a></p>
+:ET
