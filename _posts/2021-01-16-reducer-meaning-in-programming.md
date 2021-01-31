@@ -27,7 +27,7 @@ console.log(array1.reduce(reducer, 5));
 
 Reducers are functions that take the current state and an action as arguments, and return a new state result. In other words, `(state, action) => newState.` <br>
 
-->리듀서는 현재 상태와 액션을 아규먼트 해서 새로운 상태를 리턴하는 함수.
+->리듀서는 현재 상태와 액션을 아규먼트로 해서 새로운 상태를 리턴하는 함수.
 
 ---
 
@@ -40,7 +40,7 @@ Reducers are functions that take the current state and an action as arguments, a
 >
 > **그 예시로 어떤 복잡한 수학문제를 다른 비슷한 문제로 변경해서 (더 간단하게만드려고) 푸는방법을 수학에서는 reduction이라고도 합니다.** > **"In mathematics, reduction refers to the rewriting of an expression into a simpler form."**
 >
-> **그런의미에서 완벽히 번역은 힘들지만 reduce는 "고쳐나간다" (간단하게만들기위해서, 혹은 특정규칙을 적용하기위해서) 라고 생각해보면 좋을것같습니다. 따라서, 주어진 상태를 고쳐나가는게 함> 수형 프로그래밍에서 자주보이는 reduce()함수입니다. [주어진상태].reduce([특정규칙]) => 변경된상태.**
+> **그런의미에서 완벽히 번역은 힘들지만 reduce는 "고쳐나간다" (간단하게만들기위해서, 혹은 특정규칙을 적용하기위해서) 라고 생각해보면 좋을것같습니다. 따라서, 주어진 상태를 고쳐나가는게 함수형 프로그래밍에서 자주보이는 reduce()함수입니다.<br> [주어진상태].reduce([특정규칙]) => 변경된상태.**
 >
 > **즉, 리덕스에서의 reduce()는 현재상태(previousState)를 새로운상태(newState)로 변경할때 쓰는 함수가됩니다.**
 
