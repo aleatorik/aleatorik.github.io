@@ -16,7 +16,7 @@ tags: Git
 
 ## 해결 방법
 
-git 명령어로 서브머신에서 해당 레포를 remote 연결을 잘 했음에도 문제가 나온 상황이어서 구글링해보니 친절하게도 아래 링크의 Github 공식 홈페이지에 발생원인에 대해 잘 설명되어 있었다.
+git 명령어로 서브머신에서 해당 레포를 remote 연결을 잘 했음에도(`git remote add <remote repo name> <url>`) 문제가 나온 상황이어서 구글링해보니 친절하게도 아래 링크의 Github 공식 홈페이지에 발생원인에 대해 잘 설명되어 있었다.
 
 [깃허브 공식 홈페이지](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile)
 <br>
@@ -37,14 +37,15 @@ git 명령어로 서브머신에서 해당 레포를 remote 연결을 잘 했음
 $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 ```
+
 <br>
 
 --global 옵션으로 설정하는 것은 딱 한 번만 하면 된다. 해당 시스템에서 해당 사용자가 사용할 때는 이 정보를 사용한다. 만약 프로젝트마다 다른 이름과 이메일 주소를 사용하고 싶으면 --global 옵션을 빼고 명령을 실행한다.
 <br>
 
 ---
- Reference
+
+Reference
 
 [깃허브 공식 홈페이지](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address#about-commit-email-addresses)<br>
 [https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%B5%9C%EC%B4%88-%EC%84%A4%EC%A0%95](https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%B5%9C%EC%B4%88-%EC%84%A4%EC%A0%95)
-
