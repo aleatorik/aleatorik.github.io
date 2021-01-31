@@ -4,7 +4,6 @@ title: 깃허브 프로필에 contribution 표시 안될 때 해결방법
 category: Git
 tags: Git
 ---
-<br>
 
 ## 문제 상황
 
