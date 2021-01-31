@@ -37,6 +37,7 @@ git 명령어로 서브머신에서 해당 레포를 remote 연결을 잘 했음
 $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 ```
+<br>
 
 --global 옵션으로 설정하는 것은 딱 한 번만 하면 된다. 해당 시스템에서 해당 사용자가 사용할 때는 이 정보를 사용한다. 만약 프로젝트마다 다른 이름과 이메일 주소를 사용하고 싶으면 --global 옵션을 빼고 명령을 실행한다.
 <br>
